@@ -29,6 +29,7 @@ function ensureLoggedIn(req, res, next) {
 /** Middleware: Requires correct username. */
 
 function ensureCorrectUser(req, res, next) {
+  console.log(req.user.username,req.params.username,"cats" )
   try {
     if (req.user.username === req.params.username) {
       return next();
